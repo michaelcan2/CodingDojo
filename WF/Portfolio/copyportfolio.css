@@ -16,22 +16,22 @@
     display: inline-block;
     width: 47%;
     padding: 5px 20px;
-    font-family: 'times';
+    font-family: 'Merienda', cursive;
 }
-#master{
+#title{
     display: inline-block;
     width: 47%;
     text-align: right;
     margin-right: 5px;
 }
-#tophalf{
+#info{
     width: auto;
     padding: 20px;
 }
-#picture{
+#image{
     display: inline-block;
 }
-#picture img{
+#image img{
     width: 505px;
     height: auto;
     border: 3px solid white;
@@ -64,7 +64,7 @@
     width: 316px;
     padding: 10px;
 }
-.threeboxes{
+.divcontainer{
     display: inline-block;
     padding: 0px 10px;
 }
@@ -84,7 +84,7 @@
     width: 302px;
     padding: 10px;
 }
-#threeboxesholder{
+#main-content{
     margin: 0px 10px 20px 10px;
 }
 .smalldiv{
