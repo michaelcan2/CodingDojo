@@ -77,16 +77,13 @@ input[type='submit']{
 #paragraphtop{
     color:white;
 }
-#yellowwords{
-
-}
 #whitebottom{
     background-color: white;
     margin-top: 15px;
     border: 1px solid black;
 }
-#innerwrapperc{
-    margin-left: 95px;
+#innerfill{
+    margin-left: 10px;
 }
 .whiteblock{
     display: inline-block;
