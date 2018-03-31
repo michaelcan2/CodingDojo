@@ -1,0 +1,17 @@
+#wrapper{
+    width: 1000px;
+    margin: 0 auto;
+    padding-left:10px;
+    background-color: red;
+}
+img{
+    width: 237px;
+    margin:10px 10px 10px 0;
+    display: inline-block;
+}
+button{
+    color: white;
+    background-color: yellow;
+    padding: 10px 10px;
+    margin: 3px 0;
+}
