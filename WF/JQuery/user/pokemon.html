@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html> 
+    <!-- this is just how to get the api for bulbasaur -->
+    <head>
+        <meta charset="utf-8">
+        <title>Gotta Catch'em All</title>
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $.get("https://pokeapi.co/api/v2/pokemon/1/", function(res) {
+                   console.log(res.moves[9].move.name)
+                       $( "#info").html("<h2>" + res.abilities[0].ability.name + "</h2><h2>" + res.moves[9].move.name+ "</h2>");
+                }, "json");   
+            })
+            // was this all suppose to be just on the console?? you go through the console only to help guide you. 
+            // getting the choropyll ability listed on my page did not work on trasversing JSON... you have to know 
+            // couldn't I get the bulbasaur data on html using $get or does it need to be on javascript?  
+            // also is the pokeapie.co the link to the actually bulbasaur page that I am getting the data from?
+            // need to also do for loop
+        </script>
+    </head>
+    <body>
+        <h1>Bulbasaur</h1>
+        <div id="info">
+        </div>
+    </body>
+</html>
