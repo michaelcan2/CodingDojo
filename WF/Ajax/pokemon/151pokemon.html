@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <!-- this is where you use the for loop to grab all 151 pokemon information -->
+    <head>
+        <meta charset="utf-8">
+        <title>Gotta Catch'em All</title>
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                for(var i=1; i<=151; i++){
+                    
+                
+                $.get("https://pokeapi.co/api/v2/pokemon/" + i + "/", function(res) {
+                   console.log(res)
+                       $( "#allinfo").append("<div class='center-div'><img src='"+ res.sprites.front_default + "'</img></div>" )
+                }, "json");   
+            }})
+          
+        </script>
+    </head>
+    <body>
+        <h1>all pokemon</h1>
+        <div id="allinfo">
+        </div>
+    </body>
+</html>
