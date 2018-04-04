@@ -76,4 +76,4 @@ print z
 
 x=[y]+z
 
-print x
+print
