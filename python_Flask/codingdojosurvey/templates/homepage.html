@@ -1,0 +1,70 @@
+<!-- # kcodebelow
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>home</title>
+</head>
+<body>
+    <form action="/result" method="post">
+        Your Name:
+        <input type="text" name='name'><br>
+        Dojo Location:
+        <select name ='location'>
+            <option value="Chicago">{{ option1 }}</option>
+            <option value="New York">{{ option2 }}</option>
+            <option value="Seattle">{{ option3 }}</option>
+        </select><br>
+        Favorite Language:
+        <select name='language'>
+            <option value="JavaScript">{{ option4 }}</option>
+            <option value="Python">{{ option5 }}</option>
+            <option value="C#">{{ option6 }}</option>
+        </select><br>
+        Text area: <br>
+        <textarea name="text" cols="35" rows="4" placeholder="optional"></textarea><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dojo Survey</title>
+</head>
+<body>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <p>{{message}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <form action="/this_route_is_for_the_form_on_the_homepage" method="POST">
+        Your Name: <input type="text" name="name">
+        <br>
+        Dojo Location:<select name="dojo_location">
+            <option value="san_jose">San Jose</option>
+            <option value="seattle">Seattle</option>
+            <option value="chicago">Chicago</option>
+        </select>
+        <br>
+        Favorite language:<select name="favorite_language">
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="python">Python</option>
+        </select>
+        <br>
+        Comments(optional): <textarea name="comments"></textarea>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
