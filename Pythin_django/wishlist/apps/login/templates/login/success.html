@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+		{% load static %}
+	<head>
+		<link rel='stylesheet' href="{% static 'login/style.css' %}">
+
+		<title>Users</title>
+	</head>
+	<body>
+
+			{% if messages %}
+			<ul class="messages">
+				{% for message in messages %}
+				<li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+				{% endfor %}
+			</ul>
+			{% endif %}
+	   <h1>Hello, {{user.first_name}}!</h1>
+	   <a href="/logout">logout</a>
+
+	<h3>Your Wish List:</h3>
+	<div class="login">
+	<table>
+		<tr>
+			<th>Item</th>
+			<th>Added by</th>
+			<th>Date added</th>
+			<th>Action</th>
+			
+		</tr>
+		{% for course in user.courses.all %}
+		
+		<tr>
+			<td><a href="/wish/{{course.id}}">{{course.name}}</a></td>
+			<td>{{students.name}}</td>
+			<td>{{ course.created_at }}</td>
+			<td><a href="/drop/{{course.id}}">Remove from my Wishlist</a></td>
+		
+		</tr>
+		{% endfor %}
+	</table>
+
+
+	</div>
+	
+	<h3>Other Users' Wish List</h3>
+	<table>
+		<tr>
+			<th>
+				
+				Item
+			
+			</th>
+			<th>
+				Added by
+			</th>
+			<th>
+				Date Added
+			</th>
+			<th>
+				Action
+			</th>
+		</tr>
+
+			{% for course in courses %}
+			<tr>
+				<td>
+					<a href="/wish/{{course.id}}">{{course.name}}</a>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					{{course.created_at}}
+					
+				</td>
+				<td>
+					<a href="/join/{{course.id}}">Add to my Wishlist</a>
+				</td>
+			</tr>
+			{% endfor %}
+			
+			
+	</table>
+	<a href="/add">Add Item</a>
+	
+
+    </body>
+</html>

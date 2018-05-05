@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>add a new title and review</title>
+</head>
+<body>
+    	{% if messages %}
+			<ul class="messages">
+				{% for message in messages %}
+				<li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+				{% endfor %}
+			</ul>
+			{% endif %}
+    <a href="/success">Home</a>
+    <a href="/logout">logout</a>
+    <h3>Create a New Wish List Item</h3>
+    Item/Product:
+    <!-- <form action="/new" method='POST'>
+        {% csrf_token %}
+    <input type="text" value="">
+    <input type="submit" value="add">
+    </form> -->
+
+    <form action="/new" method='POST'>
+		{% csrf_token %}
+	   <!-- ^^^action is going to go tothe urls.py page which will direct it to the controler new in the views.py -->
+	  product:<input type="text" name="course_name">
+	   <input type="submit" value="add">
+	</form>	
+    
+</body>
+</html>
