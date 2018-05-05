@@ -1,0 +1,10 @@
+/Users/michaelcantu/Desktop/CodingDojo/c#/music-linq/bin/Debug/netcoreapp1.1/LinqSkeleton.deps.json
+/Users/michaelcantu/Desktop/CodingDojo/c#/music-linq/bin/Debug/netcoreapp1.1/LinqSkeleton.runtimeconfig.json
+/Users/michaelcantu/Desktop/CodingDojo/c#/music-linq/bin/Debug/netcoreapp1.1/LinqSkeleton.runtimeconfig.dev.json
+/Users/michaelcantu/Desktop/CodingDojo/c#/music-linq/bin/Debug/netcoreapp1.1/LinqSkeleton.dll
+/Users/michaelcantu/Desktop/CodingDojo/c#/music-linq/bin/Debug/netcoreapp1.1/LinqSkeleton.pdb
+/Users/michaelcantu/Desktop/CodingDojo/c#/music-linq/obj/Debug/netcoreapp1.1/LinqSkeleton.csproj.CoreCompileInputs.cache
+/Users/michaelcantu/Desktop/CodingDojo/c#/music-linq/obj/Debug/netcoreapp1.1/LinqSkeleton.AssemblyInfoInputs.cache
+/Users/michaelcantu/Desktop/CodingDojo/c#/music-linq/obj/Debug/netcoreapp1.1/LinqSkeleton.AssemblyInfo.cs
+/Users/michaelcantu/Desktop/CodingDojo/c#/music-linq/obj/Debug/netcoreapp1.1/LinqSkeleton.dll
+/Users/michaelcantu/Desktop/CodingDojo/c#/music-linq/obj/Debug/netcoreapp1.1/LinqSkeleton.pdb

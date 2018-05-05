@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Random passcode (passcode #@ViewBag.Count)</h1>
+
+    <h4>@ViewBag.Passcode</h4>
+    <form action="index">
+        <input type="submit" value="generate">
+
+    </form>
+
+    @if(ViewBag.Count >3){
+        <form action="reset">
+            <input type="submit" value="reset">
+        </form>
+    }
+    
+    <!-- everything you want to do in html file you have to start with at. -->
+</body>
+</html>

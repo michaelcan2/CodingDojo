@@ -1,0 +1,10 @@
+/Users/michaelcantu/Desktop/CodingDojo/c#/asp.netpractice/bin/Debug/netcoreapp2.0/asp.netpractice.deps.json
+/Users/michaelcantu/Desktop/CodingDojo/c#/asp.netpractice/bin/Debug/netcoreapp2.0/asp.netpractice.runtimeconfig.json
+/Users/michaelcantu/Desktop/CodingDojo/c#/asp.netpractice/bin/Debug/netcoreapp2.0/asp.netpractice.runtimeconfig.dev.json
+/Users/michaelcantu/Desktop/CodingDojo/c#/asp.netpractice/bin/Debug/netcoreapp2.0/asp.netpractice.dll
+/Users/michaelcantu/Desktop/CodingDojo/c#/asp.netpractice/bin/Debug/netcoreapp2.0/asp.netpractice.pdb
+/Users/michaelcantu/Desktop/CodingDojo/c#/asp.netpractice/obj/Debug/netcoreapp2.0/asp.netpractice.csproj.CoreCompileInputs.cache
+/Users/michaelcantu/Desktop/CodingDojo/c#/asp.netpractice/obj/Debug/netcoreapp2.0/asp.netpractice.AssemblyInfoInputs.cache
+/Users/michaelcantu/Desktop/CodingDojo/c#/asp.netpractice/obj/Debug/netcoreapp2.0/asp.netpractice.AssemblyInfo.cs
+/Users/michaelcantu/Desktop/CodingDojo/c#/asp.netpractice/obj/Debug/netcoreapp2.0/asp.netpractice.dll
+/Users/michaelcantu/Desktop/CodingDojo/c#/asp.netpractice/obj/Debug/netcoreapp2.0/asp.netpractice.pdb

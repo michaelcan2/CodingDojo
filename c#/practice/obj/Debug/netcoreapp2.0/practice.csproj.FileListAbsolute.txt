@@ -1,0 +1,10 @@
+/Users/michaelcantu/Desktop/CodingDojo/c#/practice/obj/Debug/netcoreapp2.0/practice.csproj.CoreCompileInputs.cache
+/Users/michaelcantu/Desktop/CodingDojo/c#/practice/obj/Debug/netcoreapp2.0/practice.AssemblyInfoInputs.cache
+/Users/michaelcantu/Desktop/CodingDojo/c#/practice/obj/Debug/netcoreapp2.0/practice.AssemblyInfo.cs
+/Users/michaelcantu/Desktop/CodingDojo/c#/practice/bin/Debug/netcoreapp2.0/practice.deps.json
+/Users/michaelcantu/Desktop/CodingDojo/c#/practice/bin/Debug/netcoreapp2.0/practice.runtimeconfig.json
+/Users/michaelcantu/Desktop/CodingDojo/c#/practice/bin/Debug/netcoreapp2.0/practice.runtimeconfig.dev.json
+/Users/michaelcantu/Desktop/CodingDojo/c#/practice/bin/Debug/netcoreapp2.0/practice.dll
+/Users/michaelcantu/Desktop/CodingDojo/c#/practice/bin/Debug/netcoreapp2.0/practice.pdb
+/Users/michaelcantu/Desktop/CodingDojo/c#/practice/obj/Debug/netcoreapp2.0/practice.dll
+/Users/michaelcantu/Desktop/CodingDojo/c#/practice/obj/Debug/netcoreapp2.0/practice.pdb

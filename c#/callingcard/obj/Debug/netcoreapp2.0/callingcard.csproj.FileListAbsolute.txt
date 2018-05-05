@@ -1,0 +1,10 @@
+/Users/michaelcantu/Desktop/CodingDojo/c#/callingcard/bin/Debug/netcoreapp2.0/callingcard.deps.json
+/Users/michaelcantu/Desktop/CodingDojo/c#/callingcard/bin/Debug/netcoreapp2.0/callingcard.runtimeconfig.json
+/Users/michaelcantu/Desktop/CodingDojo/c#/callingcard/bin/Debug/netcoreapp2.0/callingcard.runtimeconfig.dev.json
+/Users/michaelcantu/Desktop/CodingDojo/c#/callingcard/bin/Debug/netcoreapp2.0/callingcard.dll
+/Users/michaelcantu/Desktop/CodingDojo/c#/callingcard/bin/Debug/netcoreapp2.0/callingcard.pdb
+/Users/michaelcantu/Desktop/CodingDojo/c#/callingcard/obj/Debug/netcoreapp2.0/callingcard.csproj.CoreCompileInputs.cache
+/Users/michaelcantu/Desktop/CodingDojo/c#/callingcard/obj/Debug/netcoreapp2.0/callingcard.AssemblyInfoInputs.cache
+/Users/michaelcantu/Desktop/CodingDojo/c#/callingcard/obj/Debug/netcoreapp2.0/callingcard.AssemblyInfo.cs
+/Users/michaelcantu/Desktop/CodingDojo/c#/callingcard/obj/Debug/netcoreapp2.0/callingcard.dll
+/Users/michaelcantu/Desktop/CodingDojo/c#/callingcard/obj/Debug/netcoreapp2.0/callingcard.pdb
