@@ -1,0 +1,27 @@
+
+     @model DojoLeague.Models.Ninja
+    <!-- Models captaial Mm -->
+    <!-- change the asp controller trails to FinalTest -->
+    <form asp-controller="Ninja" asp-action="CreateNinja" method="post">
+
+        <div class="row m-1"> <span asp-validation-for="Name"></span></span></div>
+        <div class="row m-1">
+            <div class="col text-right"><label asp-for="Name"></label></div>
+            <div class="col"><input asp-for="Name"/></div>
+        </div>
+
+         <div class="row m-1"> <span asp-validation-for="Description"></span></span></div>
+        <div class="row m-1">
+            <div class="col text-right"><label asp-for="Description"></label></div>
+            <div class="col"><input asp-for="Description"/></div>
+        </div>
+
+        <div class="row m-1"> <span asp-validation-for="Level" class="text-danger d-block mx-auto"></span></div>
+        <div class="row m-1">
+            <div class="col text-right"><label asp-for="Level"></label></div>
+            <div class="col"><input asp-for="Level"/></div>
+        </div>
+
+        <div class="row float-right"><button type ="submit">Create new Ninja</button></div>
+
+    </form>

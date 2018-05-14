@@ -2817,6 +2817,24 @@
           }
         }
       },
+      "MySqlConnector/0.32.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.3.0",
+          "System.Data.Common": "4.3.0",
+          "System.Diagnostics.Process": "4.3.0",
+          "System.Net.NameResolution": "4.3.0",
+          "System.Net.Security": "4.3.0",
+          "System.Security.Cryptography.Algorithms": "4.3.0",
+          "System.Threading.Tasks.Extensions": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/MySqlConnector.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/MySqlConnector.dll": {}
+        }
+      },
       "NETStandard.Library/2.0.0": {
         "type": "package",
         "dependencies": {
@@ -13371,11 +13389,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/michaelcantu/Desktop/CodingDojo/c#/FinalTest/FinalTest.csproj",
+      "projectUniqueName": "/Users/michaelcantu/Desktop/CodingDojo/c#/LostintheWoods_DapperFramework/FinalTest.csproj",
       "projectName": "FinalTest",
-      "projectPath": "/Users/michaelcantu/Desktop/CodingDojo/c#/FinalTest/FinalTest.csproj",
+      "projectPath": "/Users/michaelcantu/Desktop/CodingDojo/c#/LostintheWoods_DapperFramework/FinalTest.csproj",
       "packagesPath": "/Users/michaelcantu/.nuget/packages/",
-      "outputPath": "/Users/michaelcantu/Desktop/CodingDojo/c#/FinalTest/obj/",
+      "outputPath": "/Users/michaelcantu/Desktop/CodingDojo/c#/LostintheWoods_DapperFramework/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

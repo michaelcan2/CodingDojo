@@ -1,0 +1,3 @@
+/Users/michaelcantu/Desktop/CodingDojo/c#/RESTauranter/obj/Debug/netcoreapp2.0/RESTauranter.csproj.CoreCompileInputs.cache
+/Users/michaelcantu/Desktop/CodingDojo/c#/RESTauranter/obj/Debug/netcoreapp2.0/RESTauranter.AssemblyInfoInputs.cache
+/Users/michaelcantu/Desktop/CodingDojo/c#/RESTauranter/obj/Debug/netcoreapp2.0/RESTauranter.AssemblyInfo.cs

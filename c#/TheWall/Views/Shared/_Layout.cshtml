@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- have to type /whatever the name of your project is at first
+to see it. <! --> 
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - TheWall</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="~/css/style.css">
+    <script type="text/javascript" src="~/js/main.js"></script>
+</head>
+<body>
+    <div class="center">
+        <div class="header border-bottom d-flex align-items-center">
+        <!-- This has made the border. -->
+        <div class="col text-left"><span class="align-middle"><h3>CodingDojoWall</h3></span></div><div class="col text-right align-middle">Welcome,"viewbag"&emsp;<a href ="logout">Log off</a></div>
+  
+        <!-- this is over the top line border. -->
+
+    </div>
+
+    <div class="body p-4 d-block justify-content-center">
+        <!-- Your View will be rendered in place of RenderBody -->
+        @RenderBody()
+    </div>
+
+    <div class="footer">
+
+    </div>
+    </div>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

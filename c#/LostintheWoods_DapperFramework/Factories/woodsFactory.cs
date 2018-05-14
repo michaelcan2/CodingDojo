@@ -24,6 +24,7 @@ namespace FinalTest.Factory{
         // this information into it. 
         {
             connectionString = $"server={Server};userid={User};password={Password};Port={Port};database={Database};SslMode=None";
+            // server={Server} which wou can change it to localhost and delete what was on top.
         }
        internal IDbConnection Connection
         {

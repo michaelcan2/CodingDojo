@@ -1,0 +1,38 @@
+
+<h2>List of local hiking trails</h2>
+<div class="row float-right">
+    <a href="/AddTrail"><button>Add a new Trail</button> </a>
+    <!-- link connects to the name of the route addtrail -->
+<!-- make foreach table 
+add button -->
+@if(ViewBag.Trails !=null)
+{
+<table class="table table-bordered table-hover">
+    <div class="row">
+        <thead>
+    <tr>
+        <th>Trail Name</th>
+        <th>Trail Length</th>
+         <th>Elevation Change</th>
+    </tr>
+    </thead>
+    </div>
+   
+         @foreach(var trail in ViewBag.Trails)
+    
+         {
+            
+             <div class ="row"><tr>
+             <div class ="col"><td><a href="trail/@trail.id">@trail.Name</a></td></div>
+             <div class ="col"><td>@trail.Length Miles</td></div>
+             <div class ="col"><td>@trail.Elevation Feet</td></div>
+             </tr></div>
+             
+
+         }
+  
+</table>
+}
+
+
+</div>
