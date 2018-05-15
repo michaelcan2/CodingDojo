@@ -1,1 +1,41 @@
-<h1>RESTauranter</h1>
+<h1>Write a new Review:</h1>
+@model RESTauranter.Models.Reviews
+<div class="row">
+<form class="mt-5" asp-controller="RESTauranter" asp-action="reviews" method="post">
+    <!-- margin top 5 is the padding -->
+
+        <div class="row m-1"> <span asp-validation-for="user_name" class="text-danger d-block mx-auto"></span></div>
+        <div class="row m-1">
+            <div class="col text-right w-50"><label asp-for="user_name"></label></div>
+            <!-- matching all labels with the model with database -->
+            <div class="col w-50"><input asp-for="user_name"/></div>
+        </div>
+
+         <div class="row m-1"> <span asp-validation-for="restaurant_name" class="text-danger d-block mx-auto"></span></div>
+        <div class="row m-1">
+            <div class="col text-right w-50"><label asp-for="restaurant_name"></label></div>
+            <div class="col w-50"><input asp-for="restaurant_name"/></div>
+        </div>
+
+         <div class="row m-1"> <span asp-validation-for="review" class="text-danger d-block mx-auto"></span></div>
+        <div class="row m-1">
+            <label asp-for="review" class="col text-right w-50"></label>
+            <textarea asp-for="review" class="col w-50"/></textarea>
+        </div>
+
+        <div class="row m-1"> <span asp-validation-for="date" class="text-danger d-block mx-auto"></span></div>
+        <div class="row m-1">
+            <label asp-for="date" class="col text-right w-50"></label>
+            <input asp-for="date" class="col w-50"/>
+        </div>
+         <div class="row m-1"> <span asp-validation-for="stars" class="text-danger d-block mx-auto"></span></div>
+        <div class="row m-1">
+            <label asp-for="stars" class="col text-right w-50"></label>
+            <input asp-for="stars" class="col w-50"/>
+        </div>
+
+
+        <div class="row float-right"><button type ="submit">ADD</button></div>
+
+    </form>
+</div>

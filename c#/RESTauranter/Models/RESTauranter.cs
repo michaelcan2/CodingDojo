@@ -1,7 +1,32 @@
 using System.ComponentModel.DataAnnotations;
-
+using System;
 namespace RESTauranter.Models{
-	public class RESTauranter:BaseEntity{
+	public class Reviews:BaseEntity{
+		public int id {get;set;}
+		[Required]
+		[Display(Name = "Name")]
+		// shows what it will actually look like rather then the actual string name is
+		public string user_name{get;set;}
+		[Required]
+		[Display(Name = "Restaurant Name")]
+		// [DisplayName("Resturant Name")]
+		public string restaurant_name{get;set;}
+		[Required]
+		[Display(Name = "Review")]
+		public string review{get; set;}
+		[Required]
+		[Display(Name = "Date Visited")]
+		[DataType(DataType.Date)]
+		public DateTime? date{get; set;}
+		[Required]
+		// 1 is for 1 and 2 is for 10
+		[Range(1,5, ErrorMessage = "Value for {0} must be between {1} and {2}.")]
+		public int? stars {get; set;}
+		public DateTime created_at= DateTime.Now;
+		public DateTime updated_at= DateTime.Now;
+		
+
+
 
 /*
 	Useful Annotations and Examples:

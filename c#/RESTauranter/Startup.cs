@@ -7,10 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using RESTauranter.Models;
 using Microsoft.EntityFrameworkCore;
-// I added using RESTauranter.Models
-// I added using Microsoft.EntityFrameworkCore
+using RESTauranter.Models;
 
 namespace RESTauranter{
     public class Startup{
@@ -25,6 +23,7 @@ namespace RESTauranter{
         public IConfigurationRoot Configuration { get; }
 
         public void ConfigureServices(IServiceCollection services){
+            services.AddDbContext<ReviewsContext>(options => options.UseMySql(Configuration["DBInfo:ConnectionString"]));
             services.AddSession();
             services.AddMvc();
         }
@@ -38,9 +37,5 @@ namespace RESTauranter{
             app.UseSession();
             app.UseMvc();
         }
-        public void ConfigureServices(IServiceCollection services){
-    services.AddDbContext<MyContext>(options => options.UseMySql(Configuration["DBInfo:ConnectionString"]));
-        }
-// I ADDED THIS BOTTOM PART FROMT HE STARTUP.CS SECTION.
     }
 }
