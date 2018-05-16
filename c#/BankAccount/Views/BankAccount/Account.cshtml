@@ -1,0 +1,43 @@
+@model BankAccount.Models.BalanceViewModel
+<h1>Welcome, @ViewBag.user.first_name @ViewBag.user.last_name</h1>
+<span>@ViewBag.user.balance.ToString("0.00")</span>
+
+<form class="mt-5 mx-auto" asp-controller="BankAccount" asp-action="transaction" method="post">
+    <span asp-validation-for="balance" class="row m-1 text-danger text-center d-block mx-auto"></span>
+    Deposit/Wthdraw: <input asp-for="balance" class="col w-50"/><br>
+<div class="row float-right"> <button type ="submit">add</button></div>
+</form>
+<table>
+    <thead>
+        <tr>
+            <th>Amount</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+
+
+<!-- using viewbag you hold the user transactions BELOW-->
+@if(@ViewBag.user.transactions !=null){
+    @foreach(var transaction in @ViewBag.user.transactions){
+        <tr>
+        @if(transaction.amount < 0){            
+            <td class="text-danger">@transaction.amount.ToString("C")</td>
+        }
+        else{
+            <td>@transaction.amount.ToString("C")</td>
+        }
+        <td>@transaction.created_at</td>
+  
+        </tr>
+    }
+}
+
+    
+</table>
+
+<!-- if the transaction amount is zero -->
+
+
+<!-- making the bootstrap amount red -->
+
+<a href="/logout">logout</a>

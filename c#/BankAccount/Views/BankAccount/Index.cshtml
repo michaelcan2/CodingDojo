@@ -1,0 +1,48 @@
+<h1 class="text-center">Register</h1>
+
+@model BankAccount.Models.RegisterViewModel
+<div class="row">
+<form class="mt-5 mx-auto" asp-controller="BankAccount" asp-action="register" method="post">
+    <!-- match asp-controller to namespace   aasp-action to register -->
+    <!-- margin top 5 is the padding -->
+
+        <div class="row m-1"> <span asp-validation-for="first_name" class="text-danger d-block mx-auto"></span></div>
+        <div class="row m-1">
+             <label class="col text-right w-50" asp-for="first_name"></label>
+            <!-- matching all labels with the model with database -->
+             <input class="col w-50" asp-for="first_name"/>
+        </div>
+
+         <div class="row m-1"> <span asp-validation-for="last_name" class="text-danger d-block mx-auto"></span></div>
+        <div class="row m-1">
+           <label class="col text-right w-50" asp-for="last_name"></label>
+            <input class="col w-50" asp-for="last_name"/>
+        </div>
+
+         <div class="row m-1"> <span asp-validation-for="email" class="text-danger d-block mx-auto"></span></div>
+        <div class="row m-1">
+            <label asp-for="email" class="col text-right w-50"></label>
+            <input asp-for="email" class="col w-50"/>
+        </div>
+
+        <div class="row m-1"> <span asp-validation-for="Password" class="text-danger d-block mx-auto"></span></div>
+        <div class="row m-1">
+            <label asp-for="Password" class="col text-right w-50"></label>
+            <input asp-for="Password" class="col w-50"/>
+        </div>
+         <div class="row m-1"> <span asp-validation-for="PasswordConfirmation" class="text-danger d-block mx-auto"></span></div>
+        <div class="row m-1">
+            <label asp-for="PasswordConfirmation" class="col text-right w-50"></label>
+            <input asp-for="PasswordConfirmation" class="col w-50"/>
+        </div>
+
+
+        <div class="row float-right"><button type ="submit">ADD</button></div>
+
+    </form>
+
+    <a href="/login">Already Registered?</a>
+</div>
+
+
+
