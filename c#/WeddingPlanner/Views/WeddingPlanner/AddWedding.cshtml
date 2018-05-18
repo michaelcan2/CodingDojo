@@ -1,0 +1,38 @@
+@model WeddingPlanner.Models.WeddingViewModel
+<h1>Plan Your Wedding</h1>
+<p> <a href="logout">logout</a>  <a href="/Dashboard">Dashboard</a></p>  
+
+<div class="row">
+<form class="mt-5 mx-auto" asp-controller="WeddingPlanner" asp-action="AddWedding" method="post">
+    <!-- match asp-controller to namespace   aasp-action to register -->
+    <!-- margin top 5 is the padding -->
+
+        <div class="row m-1"> <span asp-validation-for="wedderone" class="text-danger d-block mx-auto"></span></div>
+        <div class="row m-1">
+             <label class="col text-right w-50" asp-for="wedderone"></label>
+            <!-- matching all labels with the model with database -->
+             <input class="col w-50" asp-for="wedderone"/>
+        </div>
+
+         <div class="row m-1"> <span asp-validation-for="weddertwo" class="text-danger d-block mx-auto"></span></div>
+        <div class="row m-1">
+           <label class="col text-right w-50" asp-for="weddertwo"></label>
+            <input class="col w-50" asp-for="weddertwo"/>
+        </div>
+
+         <div class="row m-1"> <span asp-validation-for="date" class="text-danger d-block mx-auto"></span></div>
+        <div class="row m-1">
+            <label asp-for="date" class="col text-right w-50"></label>
+            <input asp-for="date" class="col w-50"/>
+        </div>
+
+        <div class="row m-1"> <span asp-validation-for="address" class="text-danger d-block mx-auto"></span></div>
+        <div class="row m-1">
+            <label asp-for="address" class="col text-right w-50"></label>
+            <input asp-for="address" class="col w-50"/>
+        </div>
+        <div class="row float-right"><button type ="submit">Create</button></div>
+
+    </form>
+
+</div>
