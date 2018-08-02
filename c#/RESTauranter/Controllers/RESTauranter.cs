@@ -20,19 +20,19 @@ namespace RESTauranter.Controllers{
         }
         [HttpPost]
         [Route("review")]
-        public IActionResult reviews(Reviews newReview){
+        public IActionResult reviews(Reviews review){
         if(ModelState.IsValid){
-            _context.Add(newReview);
+            _context.Add(review);
             _context.SaveChanges();
         
-            return RedirectToAction("review");
+            return RedirectToAction("today");
             // RedirectToAction to this specifc route route 
         }
             return View("Index");
         }
         [HttpGet]
         [Route("review")]
-        public IActionResult review(){
+        public IActionResult today(){
              ViewBag.reviews = _context.reviews.OrderBy(date => date.created_at).ToList();
             return View();
         }

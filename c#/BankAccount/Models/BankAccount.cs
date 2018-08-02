@@ -1,5 +1,6 @@
-using System.ComponentModel.DataAnnotations;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+
 
 namespace BankAccount.Models{
 	public class BankAccount:BaseEntity{
@@ -14,6 +15,7 @@ namespace BankAccount.Models{
 		// this is the balance of the user
 		public List<Transaction> transactions {get; set;}
 		// this is just making the relationship
+		// one user can have many transactions
 		public User(){
 			transactions = new List<Transaction>();
 			// this is  making the List for the relationship

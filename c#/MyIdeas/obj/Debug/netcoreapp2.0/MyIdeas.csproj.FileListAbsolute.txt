@@ -1,0 +1,11 @@
+/Users/michaelcantu/Desktop/CodingDojo/c#/MyIdeas/bin/Debug/netcoreapp2.0/MyIdeas.deps.json
+/Users/michaelcantu/Desktop/CodingDojo/c#/MyIdeas/bin/Debug/netcoreapp2.0/MyIdeas.runtimeconfig.json
+/Users/michaelcantu/Desktop/CodingDojo/c#/MyIdeas/bin/Debug/netcoreapp2.0/MyIdeas.runtimeconfig.dev.json
+/Users/michaelcantu/Desktop/CodingDojo/c#/MyIdeas/bin/Debug/netcoreapp2.0/MyIdeas.dll
+/Users/michaelcantu/Desktop/CodingDojo/c#/MyIdeas/bin/Debug/netcoreapp2.0/MyIdeas.pdb
+/Users/michaelcantu/Desktop/CodingDojo/c#/MyIdeas/obj/Debug/netcoreapp2.0/MyIdeas.csprojResolveAssemblyReference.cache
+/Users/michaelcantu/Desktop/CodingDojo/c#/MyIdeas/obj/Debug/netcoreapp2.0/MyIdeas.csproj.CoreCompileInputs.cache
+/Users/michaelcantu/Desktop/CodingDojo/c#/MyIdeas/obj/Debug/netcoreapp2.0/MyIdeas.AssemblyInfoInputs.cache
+/Users/michaelcantu/Desktop/CodingDojo/c#/MyIdeas/obj/Debug/netcoreapp2.0/MyIdeas.AssemblyInfo.cs
+/Users/michaelcantu/Desktop/CodingDojo/c#/MyIdeas/obj/Debug/netcoreapp2.0/MyIdeas.dll
+/Users/michaelcantu/Desktop/CodingDojo/c#/MyIdeas/obj/Debug/netcoreapp2.0/MyIdeas.pdb

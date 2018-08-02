@@ -13,7 +13,7 @@ namespace RESTauranter.Models{
 		public string restaurant_name{get;set;}
 		[Required]
 		[Display(Name = "Review")]
-		public string review{get; set;}
+		public string reviews{get; set;}
 		[Required]
 		[Display(Name = "Date Visited")]
 		[DataType(DataType.Date)]

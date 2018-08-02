@@ -1,0 +1,16 @@
+@model login.Models.UserViewModel
+
+<form asp-controller="Home" asp-action="Register" method="post">
+  <div class="form-group">
+    <label asp-for="first_name"></label>
+    <input class="form-control" asp-for="first_name">
+    <span asp-validation-for="first_name"></span>
+  </div>
+
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form> 
+
+<form asp-action="test" asp-controller="Home" method="post">
+  <button type="submit">submit***</button>
+</form>

@@ -56,3 +56,5 @@ namespace BankAccount.Models
 
     
 }
+
+// VIEWMODELS IS WHERE YOUR VALIDATIONS GO

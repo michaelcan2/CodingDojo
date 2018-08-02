@@ -1,0 +1,11 @@
+/Users/michaelcantu/Desktop/CodingDojo/c#/Wptest/obj/Debug/netcoreapp2.0/Wptest.csprojResolveAssemblyReference.cache
+/Users/michaelcantu/Desktop/CodingDojo/c#/Wptest/obj/Debug/netcoreapp2.0/Wptest.csproj.CoreCompileInputs.cache
+/Users/michaelcantu/Desktop/CodingDojo/c#/Wptest/obj/Debug/netcoreapp2.0/Wptest.AssemblyInfoInputs.cache
+/Users/michaelcantu/Desktop/CodingDojo/c#/Wptest/obj/Debug/netcoreapp2.0/Wptest.AssemblyInfo.cs
+/Users/michaelcantu/Desktop/CodingDojo/c#/Wptest/bin/Debug/netcoreapp2.0/Wptest.deps.json
+/Users/michaelcantu/Desktop/CodingDojo/c#/Wptest/bin/Debug/netcoreapp2.0/Wptest.runtimeconfig.json
+/Users/michaelcantu/Desktop/CodingDojo/c#/Wptest/bin/Debug/netcoreapp2.0/Wptest.runtimeconfig.dev.json
+/Users/michaelcantu/Desktop/CodingDojo/c#/Wptest/bin/Debug/netcoreapp2.0/Wptest.dll
+/Users/michaelcantu/Desktop/CodingDojo/c#/Wptest/bin/Debug/netcoreapp2.0/Wptest.pdb
+/Users/michaelcantu/Desktop/CodingDojo/c#/Wptest/obj/Debug/netcoreapp2.0/Wptest.dll
+/Users/michaelcantu/Desktop/CodingDojo/c#/Wptest/obj/Debug/netcoreapp2.0/Wptest.pdb

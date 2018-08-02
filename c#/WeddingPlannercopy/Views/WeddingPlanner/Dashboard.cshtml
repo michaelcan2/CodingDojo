@@ -1,0 +1,49 @@
+@model WeddingPlanner.Models.Wedding
+
+<h1>Dojo Activity Center</h1>
+
+<p><a href="logout">Log Off</a></p>
+
+
+<a href="/AddWedding"><button>Add a new Activity</button></a>
+@if(ViewBag.weddings != null){
+    <table class="table table-bordered table-hover">
+        <div class="row">
+            <thead>
+                <tr>
+                    <div class="col"><th>Activity</th></div>
+                    <div class="col"><th>Date</th></div>
+                    <div class="col"><th>Event Coordinator</th></div>
+                    <div class="col"><th>Number of Participants</th></div>
+                    <div class="col"><th>Actions</th></div>
+                </tr>
+            </thead>
+        </div>
+        @foreach(var wedding in ViewBag.weddings){
+            bool attending = false;
+            <div class="row">
+                <tr>
+                    <td><a href="show/@wedding.id">@wedding.wedderone</a></td>
+                    <td>@wedding.date.ToString("MM/dd/yyyy")</td>
+                    <td>@wedding.creator.first_name</td>
+                    <td>@wedding.attendees.Count</td>
+
+                    @foreach(var attendee in wedding.attendees){
+                        @if(attendee.userid == ViewBag.user.id){
+                            attending = true;
+                        }
+                    }
+                    @if(@wedding.creator == ViewBag.user){
+                        <td><a href="delete/@wedding.id">delete</a></td>
+                    } else if (attending) {
+                        <td><a href="UNRSVP/@wedding.id">Leave</a></td>
+                        <!-- check how you connected unrsvp -->
+                    } else {
+                        <td><a href="RSVP/@wedding.id">Join</a></td>
+                    }
+                </tr>
+            </div>
+        }
+   </table> 
+}
+

@@ -1,0 +1,11 @@
+/Users/michaelcantu/Desktop/CodingDojo-master/csharp/login/obj/Debug/netcoreapp2.0/login.csprojResolveAssemblyReference.cache
+/Users/michaelcantu/Desktop/CodingDojo-master/csharp/login/obj/Debug/netcoreapp2.0/login.csproj.CoreCompileInputs.cache
+/Users/michaelcantu/Desktop/CodingDojo-master/csharp/login/obj/Debug/netcoreapp2.0/login.AssemblyInfoInputs.cache
+/Users/michaelcantu/Desktop/CodingDojo-master/csharp/login/obj/Debug/netcoreapp2.0/login.AssemblyInfo.cs
+/Users/michaelcantu/Desktop/CodingDojo-master/csharp/login/bin/Debug/netcoreapp2.0/login.deps.json
+/Users/michaelcantu/Desktop/CodingDojo-master/csharp/login/bin/Debug/netcoreapp2.0/login.runtimeconfig.json
+/Users/michaelcantu/Desktop/CodingDojo-master/csharp/login/bin/Debug/netcoreapp2.0/login.runtimeconfig.dev.json
+/Users/michaelcantu/Desktop/CodingDojo-master/csharp/login/bin/Debug/netcoreapp2.0/login.dll
+/Users/michaelcantu/Desktop/CodingDojo-master/csharp/login/bin/Debug/netcoreapp2.0/login.pdb
+/Users/michaelcantu/Desktop/CodingDojo-master/csharp/login/obj/Debug/netcoreapp2.0/login.dll
+/Users/michaelcantu/Desktop/CodingDojo-master/csharp/login/obj/Debug/netcoreapp2.0/login.pdb
