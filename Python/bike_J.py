@@ -27,25 +27,32 @@ class Bike:
         self.miles = 0 
     
     def display_Info(self):
-        print({self.price}, {self.max_speed}, {self.miles})
+        print(self.price, self.max_speed, self.miles)
         return self
 
     def ride(self):
         self.miles += 10
         print("Riding")
         return self
-
-
-red_bike = Bike(4,55)
-red_bike.ride().display_Info()
-
-   def reverse(self):
-        self.miles +=- 5
+    
+    def reverse(self):
+        self.miles +=-5
+        if (self.miles < 0):
+            self.miles = 0
         print("Reversing")
         return self
 
-blue_bike = Bike(5,33)
-green_bike = Bike(2,44)
+
+red_bike = Bike(4,55)
+red_bike.ride().reverse().display_Info()
+
+blue_bike = Bike(5,44)
+blue_bike.ride().ride().ride().reverse().reverse().reverse().reverse().reverse().reverse().reverse().display_Info()
+
+  
+
+# blue_bike = Bike(5,33)
+# green_bike = Bike(2,44)
     # WHY WONT MY INSTANCES PRINT!
 
 # class bike:

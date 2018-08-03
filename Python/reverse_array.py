@@ -9,7 +9,6 @@
 # reverse([3,4,2,5])
 
 
-
 # countdown algorithm practice
 
 # def countDown(num):
@@ -34,15 +33,31 @@
 
 
 
-def countDown(n):
+# def countDown(n):
+#     arr = []
+#     while n >= 0:
+#         arr.append(n)
+#         n -=1
+#     print arr
+
+# countDown(3)
+
+# def countDown(n):
+#     arr=[]
+#     while n >=0:
+#         arr.append(n)
+#         n -=1
+#     print arr
+
+def countDown(num):
     arr = []
-    while n >= 0:
-        arr.append(n)
-        n -=1
+    while num >=0:
+        arr.append(num)
+        num -=1
     print arr
 
 countDown(3)
 
 
-use for loop to print all od them 
-car = car 
+# use for loop to print all od them 
+# car = car 
