@@ -37,8 +37,10 @@ class car:
         print("Mileage: {}mpg".format(self.mileage))
         print("Tax: {}".format(self.tax))
 
+two=car(300,31,'small',2)
 one=car(2000,35,'Full',15)
 one.display_all()
+two.display_all()
 
 
   # def __init__(self,price,name,weight,brand,status):
