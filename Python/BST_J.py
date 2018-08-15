@@ -7,25 +7,30 @@ class Node:
         self.value = value
         self.left_child = None
         self.right_child = None
-        # this new variable parent will hold a parent of a node when it's place in a tree.
+        # !!!!!!!!!!! this new variable parent will hold a parent of a node when it's place in a tree.
         # this will be set to none for the DELETE function 
         self.parent = None
 
 class binary_search_tree:
     def __init__(self):
         self.root = None
-
+    #--------------------------------- 
     def insert(self,value):
         # in video had two EQUALS
         if self.root == None:
             self.root = Node(value)
         else:
             # if there already is a self.root do this
+            # self._insert  <-- is the function CALLING another function
+            # value, and self.root is what we are going to be passing into the private
+            # function in order to insert into the tree if there is already
+            # a root.
             self._insert(value,self.root)
     # ????for the cur_node we are not inputting this somehow this is happening recursively.
     def _insert(self,value,cur_node):
         # recursion example val is 5 value, 7 on left of root node which is 10. root node is 10.
-        # 10 the root node is our current value
+        # 10 the root node is our current value!!!! before recusrion it will always be
+        # the first current node
         # **2nd time recursion the cur_node is now 7
         # **2nd time recursion now we ask if 5<7
         if value<cur_node.value:
@@ -37,7 +42,7 @@ class binary_search_tree:
                 # **2ND time recursion now 5 is the left node for 7 yay!! done!!
                 cur_node.left_child=Node(value)
 
-                # FOR the DELETE function
+                # FOR the DELETE FUNCTION!!!!!!!!!!!!!!!!
                 # we now need to alter bst's insert function so that it can correctly set this value after inserting 
                 # a new element in the tree.
                 cur_node.left_child.parent=cur_node # set parent
@@ -57,12 +62,14 @@ class binary_search_tree:
             # ^^says if value is greater then current node .value
             if cur_node.right_child == None:
                 cur_node.right_child = Node(value)
+                # !!!!!!!!!!!!!!!!! MADE for DELETE FUNCTION
                 cur_node.right_child.parent = cur_node # set parent ...was also made for delete
             else:
                 self._insert(value,cur_node.right_child)
         # this is the case where the value EQUALS THE CURRENT NODE VALUE AND WILL SIMPLY PRINT "VALUE ALREADU IN TREE!"
         else: 
             print "Value already in tree!"
+    #--------------------------------- 
 
 
     def print_tree(self):
@@ -83,6 +90,8 @@ class binary_search_tree:
             # b/c of the way we put this algos the order will be sorted
             print str(cur_node.value)
             self._print_tree(cur_node.right_child)
+
+    #--------------------------------- 
 
     # function that allows us to get a n idea of the actual data structure
     def height(self):
@@ -122,8 +131,10 @@ class binary_search_tree:
             # .......so we will be able to find the part of the tree that has the highest height aka highest level
             # ......the leaves are at. and then once we hit a left the cur_node is gonna be equal to no
             # ....in which case that is gonna be the base case. and will just return the current height.
+    
+    #-------------------------------------
 
-    # ...FOR delete function 
+    # ...FOR DELETE function 
     # add parent in node, add line 38 and line 55
     # this find function returns the node with specified input value 
     # this will return an actual node rather then just a boolean vale like the search function 
@@ -142,8 +153,11 @@ class binary_search_tree:
         elif value > cur_node.value and cur_node.right_child != None:
             return self._find(value,cur_node.right_child)
 
+    #-------------------------------------
+
     # ...after we made the find function FOR the delete function we now have all the items we need
     # for the DELETE FUNCTION
+
 
     # for a CLEANER user interface we will be declaring two verison of the function 
     # one called delete value, and another called delete node
@@ -153,11 +167,12 @@ class binary_search_tree:
     def delete_value(self,value):
         # inside delete value will simply be calling the delete node function, passing the return value of the 
         # find function as the node parameter 
+        
         return self.delete_node(self.find(value))
       
 
 
-    def delete_node(self,node):
+    def delete_node(self,Node):
         # inside delete node will first be writing two more HELPER functions the first called MIN_VALUE_NODE
         def min_value_node(n):
             # this will be passed a single node which will be treated as a root of a binary search tree.
@@ -168,9 +183,12 @@ class binary_search_tree:
             while current.left_child !=None: 
                 current = current.left_child
             return current 
+        # ^^^^^^will be using this function later to find the next in order successor!!
 
-        # this num_children function returns the number of children attached to the inputted node
+
+        # this num_children function will just returns the number of children attached to the inputted node
         def num_children(n):
+            print('here!!!!!!')
             num_children=0
             # either 0,1,or 2
             if n.left_child!=None:
@@ -179,79 +197,85 @@ class binary_search_tree:
                 num_children+=1
             return num_children
 
-            # will now create variables that hold both the parent of the node to delete as well as the 
-            # number of childern.
+        # will now create variables that hold both the parent of the node to delete as well as the 
+        # number of childern.
 
-            # get the parent of the node to be deleted
-            node_parent = node.parent
+        # get the parent of the node to be deleted
+        node_parent = Node.parent
 
-            # get the number of children of the node to be deleted
-            node_children = num_children(node)
+        # get the number of children of the node to be deleted
+        node_children = num_children(Node)
 
-            # break operation into different cases based on the structure of the tree & node to 
-            # be deleted
+        # break operation into different cases based on the structure of the tree & node to 
+        # be deleted
 
-            # the first if statement will cover case 1
-            # CASE 1 (node has no children)
-            if node_children == 0:
+        # the first if statement will cover case 1
+        # CASE 1 (node has no children)
+        if node_children == 0:
 
-                # setting the appropriate pointer and the parent to none to remove the leaf node.
+            # setting the appropriate pointer and the parent to none to remove the leaf node.
 
-                # remove reference to the node from the parent 
-                if node_parent != None:
-                    if node_parent.left_child == Node:
-                        node_parent.left_child=None
-                    else:
-                        node_parent.right_child=None
+            # remove reference to the node from the parent 
+            if node_parent != None:
+                if node_parent.left_child == Node:
+                    node_parent.left_child=None
                 else:
-                    self.root = None 
+                    node_parent.right_child=None
+            else:
+                self.root = None 
 
-            if node_children == 1:
-                # this second if statement will cover CASE 2
-                # will first create a new variable named child to hold the single child of the node we
-                # wish to delete.
+        if node_children == 1:
+            # this second if statement will cover CASE 2
+            # will first create a new variable named child to hold the single child of the node we
+            # wish to delete.
 
-                # get the single child node
-                if node.left_child!=None:
-                    child=node.left_child
+            # get the single child node
+            if Node.left_child!=None:
+            # Here going to maeke a variable named child to hold ths single child of the node
+            # we wish to delete.
+                child=Node.left_child
+            else:
+                child=Node.right_child
+
+            if node_parent !=None:
+            # will then make the change to the parent node replacing the pointer to the node
+            # we wish to delete with the pointer to its child node 
+
+            # replace the node to be deleted with its child
+            # this is then making the change to the parent Node replacing the pointer to the Node
+            #  we wish to delete with the pointer to its child Node 
+                if node_parent.left_child == Node:
+                    node_parent.left_child=child
                 else:
-                    child=node.right_child
-
-                if node_parent !=None:
-                # will then make the change to the parent node replacing the pointer to the node
-                # we wish to delete with the pointer to its child node 
-
-                # replace the node to be deleted with its child
-                    if node_parent.left_child == node:
-                        node_parent.left_child=child
-                    else:
-                    # at the end wll update the parent pointer and the child to reflect the fact 
-                    # we've moved it up a level in the tree.
-                        node_parent.right_child=child
-                else:
-                    self.root = child 
-                
-                # corrects the parent pointer in node
-                child.parent=node.parent 
+                # at the end wll update the parent pointer and the child to reflect the fact 
+                # we've moved it up a level in the tree.
+                    node_parent.right_child=child
+            else:
+                self.root = child 
             
+            # corrects the parent pointer in node
+            child.parent=Node.parent 
+        
 
-            # CASE 3 (node has two children) where the node we wish to delete has TWO CHILDERN.
-            if node_children == 2:
-                # IN this case we'll locate the next inorder successor using are mid_value node function
-                # will then copy the value we found in that node into the node we wish to delete
+        # CASE 3 (node has two children) where the node we wish to delete has TWO CHILDERN.
+        if node_children == 2:
+            # IN this case we'll locate the next inorder successor using are mid_value node function
+            # will then copy the value we found in that node into the node we wish to delete
 
-                # get the inorder succesor of the deleted node
-                successor = min_value_node(node.right_child)
+            # get the inorder succesor of the deleted node
+            successor = min_value_node(Node.right_child)
 
-                # copy the inorder sucessor's value to the node formerly 
-                # holding the value we wished to delete
-                node.value = successor.value
+            # copy the inorder sucessor's value to the node formerly 
+            # holding the value we wished to delete
+            Node.value = successor.value
 
 
-                # at the end will call the delete node function recursively this time passing the original
-                # inorder successor as the node to delete.
-                self.delete_node(successor)
+            # at the end will call the delete node function recursively this time passing the original
+            # inorder successor as the node to delete.
+            self.delete_node(successor)
+    
 
+    #--------------------------------- 
 
                 
 
@@ -286,14 +310,11 @@ class binary_search_tree:
             # false to show that we couldnt find anything in the tree.
             return False
 
+    #--------------------------------- 
 
 
 
-
-
-
-
-# apprently he made a function that randomly made numbers to fill the tree
+# this function that randomly made numbers to fill the tree
 def fill_tree(tree,num_elems=100,max_int=500):
     from random import randint
     for _ in range(num_elems):
@@ -314,6 +335,6 @@ tree.insert(11)
 
 # print ("tree height:"+ str(tree.height()))
 
-tree.delete_value(11)
+tree.delete_value(10)
 tree.print_tree()
             

@@ -28,7 +28,7 @@ print_array_value(['mike','liz','steve', "i am a having a good day"])
 def maximum_array(arr):
     print max(arr)
 
-maximum_array([44,12,67])
+print (maximum_array([44,12,67]))
 
 def find_average(arr):
     print (sum(arr)/len(arr))

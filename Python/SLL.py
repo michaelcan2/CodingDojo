@@ -1,40 +1,40 @@
 
 # dennis whats so special about __init__?? its a constructor?? which means??
 # below is a constructor for all the nodes
-# class Node:
-#     def __init__(self,value):
-#         self.value = value
-#         self.next = None
+class Node:
+    def __init__(self,value):
+        self.value = value
+        self.next = None
 
 
-# class Slist:
-#     def __init__(self,value):
-#         # your creating the node conneting it the node class WHICH HAS THE VALUE
-#         node = Node(value)
-#         # your pointing the head to be the new node
-#         self.head = node
+class Slist:
+    def __init__(self,value):
+        # your creating the node conneting it the node class WHICH HAS THE VALUE
+        node = Node(value)
+        # your pointing the head to be the new node
+        self.head = node
 
 
-#     def addNode(self,value):
-#         runner = self.head
-#         # the .next makes it moving till none
-#         # set the while for what the ending will become
-#         while runner.next != None:
-#         # this is the part that makes the runner actually move
-#             runner = runner.next
-#         node = Node(value)
-#         runner.next = node
+    def addNode(self,value):
+        runner = self.head
+        # the .next makes it moving till none
+        # set the while for what the ending will become
+        while runner.next != None:
+        # this is the part that makes the runner actually move
+            runner = runner.next
+        node = Node(value)
+        runner.next = node
     
-#     def printAllValues(self):
-#         # whatever self.head is putting too I want runner to point to it
-#         runner = self.head
-#         while runner.next != None:
-#         #  prints all the node values while in the loop
-#             print(runner.value)
-#             # after printing now in the while loop the runner will be pointing to different nodes in the list
-#             runner=runner.next
-#         # this only prints the last one
-#         print(runner.value)
+    def printAllValues(self):
+        # whatever self.head is putting too I want runner to point to it
+        runner = self.head
+        while runner.next != None:
+        #  prints all the node values while in the loop
+            print(runner.value)
+        # after printing now in the while loop the runner will be pointing to different nodes in the list
+            runner=runner.next
+        # this only prints the last one
+        print(runner.value)
 
 #     def removeNode(self,value):
 #         # self.head is the poonter of where its store adding .value specifcally points to the value of where its 
@@ -54,49 +54,49 @@
 #             runner = runner.next
             
 
-# list = Slist(6)
-# list.addNode(8)
-# list.addNode(9)
-# list.addNode(2)
+list = Slist(6)
+list.addNode(8)
+list.addNode(9)
+list.addNode(2)
 # list.removeNode(8)
-# list.printAllValues()
+list.printAllValues()
 
 
 # pointer to access the other functions 
 
-class Node:
-    def __init__(self,value):
-        self.value = value
-        self.next = None
+# class Node:
+#     def __init__(self,value):
+#         self.value = value
+#         self.next = None
 
-class Slist:
-    def __init__(self,value):
-        node = Node(value)
-        self.head = node
+# class Slist:
+#     def __init__(self,value):
+#         node = Node(value)
+#         self.head = node
 
-    def addNode(self,value):
-        runner = self.head
+#     def addNode(self,value):
+#         runner = self.head
         
-        while (runner.next != None):
-            runner = runner.next
-        node = Node(value)
-        runner.next = node
+#         while (runner.next != None):
+#             runner = runner.next
+#         node = Node(value)
+#         runner.next = node
 
-    def printAllValues(self):
-         runner = self.head
-         print(runner.value)
-         while (runner.next != None):
+#     def printAllValues(self):
+#          runner = self.head
+#          print(runner.value)
+#          while (runner.next != None):
          
-             runner = runner.next
-             print(runner.value)
+#              runner = runner.next
+#              print(runner.value)
         
 
-    def removeNode(self,value):
-        # doesnt this remove the first node?
-        if ( self.head.value == value):
-            self.head = self.head.next
-            print(self.head)
-            return
+#     def removeNode(self,value):
+#         # doesnt this remove the first node?
+#         if ( self.head.value == value):
+#             self.head = self.head.next
+#             print(self.head)
+#             return
 
         # a quesitons
         # def insertNode(self,value):
@@ -109,9 +109,9 @@ class Slist:
 
         
             
-list = Slist(6)
-list.addNode(8)
-list.addNode(9)
-list.addNode(2)
-list.removeNode(6)
-list.printAllValues()
+# list = Slist(6)
+# list.addNode(8)
+# list.addNode(9)
+# list.addNode(2)
+# list.removeNode(6)
+# list.printAllValues()
