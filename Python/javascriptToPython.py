@@ -43,13 +43,13 @@
 def parensValid(str):
     open = 0
     close = 0
-    for i in len(str):
+    for i in range(len(str)):
         # cant be enumerate go over with josh after 11am lecture
         if(str[i] == '('):
             open += 1
         
         if(str[i] == ')'):
-            if(open < close):
+            if(open <= close):
                 return False
             close +=1
     if(close != open):
@@ -57,7 +57,7 @@ def parensValid(str):
     else:
         return True
 
-print(parensValid('(whatup))world()'))
+print(parensValid('(whatup)world()'))
 
 
 
