@@ -1,5 +1,4 @@
 # all your comments may have MESSED THIS UP!!
-
 class Stack:
     def __init__(self):
         # we defined a class variable called items
@@ -32,16 +31,49 @@ class Stack:
     def is_empty(self):
         # this == will have a boolean output
         return self.items == []
-        #
     def get_stack(self):
         return self.items
 
-    s = Stack()
-    s.push("A")
-    s.push("B")
-    print(s.get_stack())
-    # ['A','B'] <--this is what this wld print out
-    # 'A' is on the bottom
+
+# Below is your new easy understandbale way by doing.
+# class Stack:
+#     def __init__(self):
+#         self.root = []
+
+#     def push(self,data):
+#         return self.root.append(data)
+
+#     def pop(self):
+#         return self.root.pop()
+
+#     def get(self):
+#         return self.root
+
+#     def empty(self):
+#         if self.root == []:
+#             return True
+#         else:
+#             return False
+
+#     def peek(self):
+#         if self.root != None:
+#             return self.root[-1]
+
+thing = Stack()
+
+
+thing.push(1)
+thing.push(2)
+thing.push(3)
+
+
+print thing.peek()
+
+
+
+
+
+
 
 
 

@@ -208,7 +208,6 @@ function LinkedList(){
 
 
 
-
 // a print method will make this nicer
 
 // var list = new LinkedList();

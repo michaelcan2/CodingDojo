@@ -41,12 +41,14 @@ class binary_search_tree:
                 # then 5 would be the new node of the left side
                 # **2ND time recursion now 5 is the left node for 7 yay!! done!!
                 cur_node.left_child=Node(value)
+                # ^^.leftchild will turn into a node with the value inputed insideit.
 
                 # FOR the DELETE FUNCTION!!!!!!!!!!!!!!!!
                 # we now need to alter bst's insert function so that it can correctly set this value after inserting 
                 # a new element in the tree.
                 cur_node.left_child.parent=cur_node # set parent
             else:
+                # since this is using recurion/ contiue the method it doesnt return
                 self._insert(value,cur_node.left_child)
                 # now we go through the _insert function again, this time we CHANGED the current node 10 to the lower
                 # one which is 
@@ -63,7 +65,9 @@ class binary_search_tree:
             if cur_node.right_child == None:
                 cur_node.right_child = Node(value)
                 # !!!!!!!!!!!!!!!!! MADE for DELETE FUNCTION
-                cur_node.right_child.parent = cur_node # set parent ...was also made for delete
+                cur_node.right_child.parent = cur_node # set pare;
+                # ..............
+                # nt ...was also made for delete
             else:
                 self._insert(value,cur_node.right_child)
         # this is the case where the value EQUALS THE CURRENT NODE VALUE AND WILL SIMPLY PRINT "VALUE ALREADU IN TREE!"
@@ -76,6 +80,7 @@ class binary_search_tree:
         # first check if the root is an actual node
         if self.root != None:
             # here we are passing the root as the parameter
+            # this is calling
             self._print_tree(self.root) 
             # were gonna be dividing into two functions one reusive and one not like the _insert to make it eaiser to understand
     
@@ -83,6 +88,8 @@ class binary_search_tree:
     def _print_tree(self,cur_node):
         # now we check if the node doesnt equal node
         if cur_node != None:
+            # until it hits none it will print
+            # ONCE IT HITS NONE IT WILL GO BACK UP TO THE NEXT HIGHEST OF THE RECURISON LIST.
             # print tree passing the left child as the parameter
             self._print_tree(cur_node.left_child)
             # print the value at the current node
@@ -90,6 +97,32 @@ class binary_search_tree:
             # b/c of the way we put this algos the order will be sorted
             print str(cur_node.value)
             self._print_tree(cur_node.right_child)
+
+
+    def size(self):
+        count = 0
+        if self.root != None:
+            # you do this recursively so you can go left left left then right 
+            # line 106 count returns 115 count
+            count = self._size(self.root, count)
+            # why print up here not down there
+            print count
+            return count
+
+    def _size(self, runner, count):
+        if runner != None:
+            # this +1 is counting the self.root
+            count += 1
+            # why count = for recursion
+            count = self._size(runner.left_child, count)
+            count = self._size(runner.right_child, count)
+        # why return here??is it to stop
+        # when it ends its going to return to line 107
+        # and then prints the total of the counts and returns them
+        return count
+
+
+
 
     #--------------------------------- 
 
@@ -101,8 +134,8 @@ class binary_search_tree:
             # isnt even an element in the root
         else:
             return 0
-            # for prive function current node 1st param and an int for the second param 
-            # reason we want to pass an integer is because we want to store the height that we seen on 
+            # for private function current node 1st param and an int for the second param 
+            # the reason we want to pass an integer is because we want to store the height that we seen on 
             # each recusive call so as were trasvering down the nodes we might be changing this current node
             # but if we didn't have a variable neither as a parameter or stored as say a global variable or an 
             # internal variable inside of the class we wouldnt have a way of knowning the actual height we've 
@@ -113,18 +146,19 @@ class binary_search_tree:
             # the current height because we dont want to increment it at all if the current node were looking 
             # at is obviously doesn't have any value in it.
             if cur_node == None:
-                # ^^if cur_node = node then just return height 
+                # ^^if cur_node = none then just return height 
                 return cur_height
                 # next were going to be getting the rest of the height from the left subtree 
                 # so starting off from the left child of the current node and doing the same thing
                 # on the right subtree so getting the height from the right child on down to the leaves 
                 # and then were going to be comparing those seeing which is larger, and then just returning that value
-            left_height=self._height(cur_node.left_child,cur_height+1)
+            else:
+                left_height=self._height(cur_node.left_child,cur_height+1)
             # = to a recusive call the height^^passing left value as the current node and the current height plus 1 
             # as the current height. because were incrementing the height to allow the value to be tabulated correctly 
             # on the next recursive call and we'll say...
-            right_height=self._height(cur_node.right_child,cur_height+1)
-            return max(left_height,right_height)
+                right_height=self._height(cur_node.right_child,cur_height+1)
+                return max(left_height,right_height)
             # ^^^ so this means which ever one is larger the left subtree aka left_height or 
             # right subtree aka right_height is the one that will be returned.
             # ........with this whole function were gonna be doing a comparison at every single node in the tree
@@ -139,6 +173,7 @@ class binary_search_tree:
     # this find function returns the node with specified input value 
     # this will return an actual node rather then just a boolean vale like the search function 
     def find(self,value):
+        
         # if the value passed in the find function is NOT found in the tree will just return none.
         if self.root != None:
             return self._find(value,self.root)
@@ -146,12 +181,21 @@ class binary_search_tree:
             return None
 
     def _find(self,value,cur_node):
+        print(cur_node.value)
+        print(value)
+    
         if value == cur_node.value:
-            return cur_node
+            print("yo")
+            return "True"
         elif value < cur_node.value and cur_node.left_child!=None:
-            return self._find(value,cur_node.left_child)
+            print("mic check check")
+            self._find(value,cur_node.left_child)  
         elif value > cur_node.value and cur_node.right_child != None:
-            return self._find(value,cur_node.right_child)
+            print("one two one two")
+            self._find(value,cur_node.right_child)
+        else:
+            print("womp womp")
+            return "cant find"
 
     #-------------------------------------
 
@@ -276,13 +320,6 @@ class binary_search_tree:
     
 
     #--------------------------------- 
-
-                
-
-
-
-
-
     
     # now we are implementing a search function vid 25:00
     def search(self,value):
@@ -311,16 +348,32 @@ class binary_search_tree:
             return False
 
     #--------------------------------- 
+    # # no duplicates already implemented in the if statement
+    # def NoDupes(self,value):
+    #     current = self.root
+    #     # current2 = self.head 
+    #     while(current != None):
+    #         if (current == value):
+    #             return False
+    #         else:
+    #             if(current.value > value):
+    #                 current = current.left_child
+    #             else:
+    #                 current = current.right_child
+    #     self.insert(value)
+    #     return True 
 
 
 
+
+#------------------------------------
 # this function that randomly made numbers to fill the tree
-def fill_tree(tree,num_elems=100,max_int=500):
-    from random import randint
-    for _ in range(num_elems):
-        cur_elem = randint(0, max_int)
-        tree.insert(cur_elem)
-    return tree
+    def fill_tree(tree,num_elems=100,max_int=500):
+        from random import randint
+        for _ in range(num_elems):
+            cur_elem = randint(0, max_int)
+            tree.insert(cur_elem)
+        return tree
 
 
 
@@ -332,9 +385,16 @@ tree.insert(6)
 tree.insert(10)
 tree.insert(9)
 tree.insert(11)
+tree.size()
+tree.find(11)
+print (tree.height())
+# print(tree.NoDupes(12))
+# print(tree.find(11))
 
 # print ("tree height:"+ str(tree.height()))
 
-tree.delete_value(10)
-tree.print_tree()
-            
+# tree.delete_value(10)
+# tree.print_tree()
+# tree.size()            
+
+# the order on how it prints is inorder transversal

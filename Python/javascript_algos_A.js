@@ -61,27 +61,28 @@ function parensValid(str){
 
 
 // ----pg.82 arrays pt 2
-// array;flatten
+
 function flatten(arr){
     // the thing about array in place
     // maniulate it inside the same arr,
     // but without the inplace you can make a new array, and put your 
     // stuff in the new place.
-    console.log('in function')
-    return 'in function'
+
     var result = [];
     // first we need to iterate through the array
     for(var i = 0; i <arr.length; i ++){
-        return 'inforloop'
+      
         console.log('looping');
     // checks if its an int or an array
         if(Array.isArray(arr[i]) == true){
-            return 'inside if';
-            console.log(arr[i]);
-            if(arr[i].length> 0){
-                for (var j = 0; i < arr.length; i++){
-                        result.push(arr[i][j])
+       
+            console.log(Array.isArray(arr[i]));
+            if(arr[i] == undefined){
+              for (var j = 0; j < arr.length; j++){
+                  console.log(arr[i][j])
+                  result.push(arr[i][j])
                 }
+                console.log(arr[i])
             }
         }
         else{
@@ -90,4 +91,38 @@ function flatten(arr){
     }
     return result;
 }
-console.log(flatten([1,2,3,[4,5],[]]));
+console.log(flatten([1,2,3,[4,5],[],8]));
+
+// 1.decide what your getting back and what you need to check for inorder to get that thing back.
+// 2. check for what your comparing
+// 3. make sure your order of stuff makes sense from 1.
+// 4.when your confused console.log everything to give your clarify on that its printing what your expecting.
+
+
+// ----------- array: Remove Duplicates
+
+function remove(arr){
+    for(var i = 0; i < arr.length; i++){
+      for(var w=i+1; w < arr.length; w++){
+        if(arr[i] == arr[w]){
+          arr.splice(w,1);
+          console.log( arr[i]);
+          
+          
+        }
+  
+      }
+      
+    }
+    return arr
+  
+  }
+  
+  remove([1,2,3,3,4])
+  
+  // 1.decide what your getting back and what you need to check for inorder to get that thing back.
+  // 2. check for what your comparing
+  // 3. make sure your order of stuff makes sense from 1.
+  // 4.when your confused console.log everything to give your clarify on that its printing what your expecting.
+  
+  // check for extra integers
